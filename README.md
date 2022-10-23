@@ -5,8 +5,15 @@ Sublime Text formatting extension for [dprint](https://dprint.dev)—a pluggable
 ## Setup
 
 1. Install [dprint's CLI](https://dprint.dev/install).
-2. Install Sublime Text plugin via [Package Control](https://packagecontrol.io/packages/dprint)
+2. Install Sublime Text plugin via [Package Control](https://packagecontrol.io/packages/dprint) *
 3. Run `dprint init` in the root directory of your repository to create a configuration file.
+
+Note, this plugin is not currently available through Package Control. The following instructions can be used as an alternative installation method:
+
+1. In Sublime Text open the command pallete and type `Package Control: Add Repository`
+2. Enter the https url to clone this repo `https://github.com/dprint/dprint-sublime.git`
+3. Open the command pallete again and type `Package Control: Install Package`
+4. Search for `dprint-sublime` and select
 
 ## Features
 
@@ -17,7 +24,3 @@ Plugins are currently resolved based on the configuration file found based on th
 ## Commands
 
 * `dprint_fmt` - Formats the code being edited.
-
-## Slower
-
-Note, this plugin is slower than the one available for vscode because it will startup the dprint process each time for every format. It could be made faster if someone wants to implement it using the editor-service API: https://github.com/dprint/dprint/blob/main/docs/editor-extension-development.md (wait for editor-service schema v5 to be finalized though)
